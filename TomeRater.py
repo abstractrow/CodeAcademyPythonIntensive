@@ -4,8 +4,8 @@ Author: Alfonso Camblor
 
 Note: Hello, there is something i would like to fix.
 
-When I have a constructor error, I don't really know how to handle it. I saw that __del__ with the variable you have created would fix it, but I haven't seen that variable
-in this course, so I have decided to equal the inner variables to my own error values.
+When I have a constructor error, I don't really know how to handle it. I saw that __del__ with the variable you have created would fix it,
+but I haven't seen that function in this course, so I have decided to equal the inner variables to my own error values.
 '''
 
 #User object
