@@ -52,3 +52,7 @@ print(Tome_Rater.get_n_most_prolific_readers(4))
 print("\nPrint Tome_Rater:\n")
 print(Tome_Rater)
 
+print("\nWe are going to create a new empty Tome_Rater and see if the comparison it's fine (should return False):")
+Tome_Rater_2 = TomeRater()
+print(Tome_Rater == Tome_Rater_2)
+

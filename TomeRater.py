@@ -1,6 +1,7 @@
 '''
 Project: Tome Rater
 Author: Alfonso Camblor
+GitHub: https://github.com/camblor
 
 Note: Hello, there is something i would like to fix.
 
@@ -87,6 +88,7 @@ class Book(object):
             self.isbn = isbn #number
             self.price = price
             self.ratings = [] #list
+            print("You have added the book " + self.title + " with ISBN: " + str(self.isbn))
         else:
             print("Book's constructor error")
             self.title = "Error" #string
@@ -387,17 +389,25 @@ class TomeRater():
     def __eq__(self, other_tomerater):
         #We will need to compare both first argument with second argument
         for email in self.users:
-            if email not in other_tomerater.users:
+            if email in other_tomerater.users:
+                continue
+            else:
                 return False
         for book in self.books:
-            if book not in other_tomerater.books:
+            if book in other_tomerater.books:
+                continue
+            else:
                 return False
         #and second argument with first argument
         for email in other_tomerater.users:
-            if email not in self.users:
+            if email in self.users:
+                continue
+            else:
                 return False
         for book in other_tomerater.books:
-            if book not in self.books:
+            if book in self.books:
+                continue
+            else:
                 return False
         #If everything is equal, they are so.
         return True
